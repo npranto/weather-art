@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "clean": "rimraf dist/",
-    "prod": "NODE_ENV=production npm run clean && node ./node_modules/webpack/bin/webpack.js -p",
+    "prod": "NODE_ENV=production npm run clean && node ./node_modules/webpack/bin/webpack.js --config=webpack.prod.config.js -p",
     "build": "npm run clean && node ./node_modules/webpack/bin/webpack.js",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -38,6 +38,7 @@
     "axios": "^0.16.0",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
