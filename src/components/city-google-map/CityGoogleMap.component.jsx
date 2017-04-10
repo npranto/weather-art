@@ -8,13 +8,20 @@ class CityGoogleMap extends Component {
 	}
 
 	componentDidMount() {
-		new google.maps.Map(this.refs.cityMap, {
+		const map = new google.maps.Map(this.refs.cityMap, {
           zoom: 12,
           center: {
           	lat: this.props.lat, 
           	lng: this.props.lon
           }
         })
+        new google.maps.Marker({
+          position: {
+          	lat: this.props.lat, 
+          	lng: this.props.lon
+          },
+          map: map
+        });
 	}
 
 	render() {

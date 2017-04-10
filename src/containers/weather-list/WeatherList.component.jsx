@@ -67,10 +67,10 @@ class WeatherList extends Component {
 			    <table cellPadding="0" cellSpacing="0" border="0">
 			      <thead>
 			        <tr>
-			          <th>City</th>
-			          <th>Temperature <sup>(<span>&#8457;</span>)</sup></th>
-			          <th>Pressure <sup>(hPa)</sup></th>
-			          <th>Humidity <sup>(<span>&#37;</span>)</sup></th>
+			          <th className="z-depth-3">City</th>
+			          <th className="z-depth-3">Temperature <sup>(<span>&#8457;</span>)</sup></th>
+			          <th className="z-depth-3">Pressure <sup>(hPa)</sup></th>
+			          <th className="z-depth-3">Humidity <sup>(<span>&#37;</span>)</sup></th>
 			        </tr>
 			      </thead>
 			    </table>

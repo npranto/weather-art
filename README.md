@@ -1,25 +1,75 @@
-# ReduxSimpleStarter
+# weather-art
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Get a quick glimpse of the weather for your favorite US cities
 
-### Getting Started
 
-There are two methods for getting started with this repo.
+## Features
+* A farely simple, yet useful applicatino to get a quick overview of the weather of your favorite cities or destinations.
+* Going to Seattle anytime soon, get a gimpse of of the average tempetature, pressure and humidity for the upcoming week. 
+* Provides a visual graph to show incremental and decremental factors in the weather for the next few days
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+## Getting Started
+* Quick [**DEMO**](https://github.com/npranto/weather-art)
+* To start exploring with the codebase by installing a local version of weather-art, follow the steps below.
+
+
+
+### Prerequisites
+Make sure to have the following packages installed:
+* [Git](https://git-scm.com/) - Version Control System
+* [NodeJS](https://nodejs.org/en/) - Environment/Runtime
+* [Yarn](https://yarnpkg.com/en/) - Package Manager
+* [Webpack](https://webpack.js.org/) - Bundling Components and Assets
+
+### Installing
+
+A step by step series of examples that tell you have to get a development environment running:
+
+To clone the current repository, open up the command line and run 
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
+git clone https://github.com/npranto/weather-art.git [PROJECT_NAME]
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Now, go into the project directory
 
 ```
-> npm install
-> npm start
+cd [PROJECT_NAME]
 ```
+
+Then, install packages/dependencies
+
+```
+yarn install
+```
+
+Finally, to run a localhost in the browser
+
+```
+yarn start
+```
+
+## Technologies/Dependencies
+
+* [react](https://facebook.github.io/react/) - JavaScript Library Front End
+* [materialize.css](http://materializecss.com/) - Front End Framework
+* [yarn](https://yarnpkg.com/en/) - Package Manager
+* [webpack](https://webpack.js.org/) - Bundling Components and Assets
+* [babel](https://babeljs.io/) - ES6 and React Transpiler
+* [jQuery](https://jquery.com/) - JavaScript Library
+* [lodash](https://lodash.com/) - JavaScript Utility Library
+* [hover.css](http://materializecss.com/) - Collection of Hover Effects
+* [moment](https://momentjs.com/) - JavaScript Date Library
+* [Google Maps API](https://developers.google.com/maps/documentation/javascript/adding-a-google-map) - Google Maps API
+* [rimraf](https://www.npmjs.com/package/@alexbinary/rimraf) - Dependency Management
+* [react-redux](https://github.com/reactjs/react-redux) - Binding Redux With React
+* [react-sparklines](https://momentjs.com/) - React Chart Module
+* [redux](https://momentjs.com/) - State Container or Manager
+* [redux-promise](https://momentjs.com/) - Redux Middleware 
+
+
+
+
+## Authors
+
+* **Nazmuz Shakib Pranto** [[GitHub](https://github.com/npranto) | [LinkedIn](https://www.linkedin.com/in/npranto/)]
