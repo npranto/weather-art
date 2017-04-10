@@ -56,7 +56,7 @@ yarn start
 * [yarn](https://yarnpkg.com/en/) - Package Manager
 * [webpack](https://webpack.js.org/) - Bundling Components and Assets
 * [babel](https://babeljs.io/) - ES6 and React Transpiler
-* [jQuery](https://jquery.com/) - JavaScript Library
+* [jquery](https://jquery.com/) - JavaScript Library
 * [lodash](https://lodash.com/) - JavaScript Utility Library
 * [hover.css](http://materializecss.com/) - Collection of Hover Effects
 * [moment](https://momentjs.com/) - JavaScript Date Library
