@@ -9,7 +9,7 @@ Get a quick glimpse of the weather for your favorite US cities
 * Provides a visual graph to show incremental and decremental factors in the weather for the next few days
 
 ## Getting Started
-* Quick [**DEMO**](https://github.com/npranto/weather-art)
+* Quick [**DEMO**](http://stupendous-distance.surge.sh/)
 * To start exploring with the codebase by installing a local version of weather-art, follow the steps below.
 
 
