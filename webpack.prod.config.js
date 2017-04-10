@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractCSS = require('extract-text-webpack-plugin');
 
-console.log('RUNNING DEVELOPMENT...');
+console.log('RUNNING PRODUCTION...');
 
 const VENDOR_LIBS = [
     'jquery', 
@@ -64,14 +64,11 @@ const config = {
                 return module.context && module.context.indexOf('node_modules') !== -1;
             }
         }),
-        new ExtractCSS('styles.bundle.css')
-    ],
-    devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        port: 8080
-    },
-    devtool: '#source-map'
+        new ExtractCSS('styles.bundle.css'),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        })
+    ]
 }
 
 const webpackConfig = module.exports = config;
