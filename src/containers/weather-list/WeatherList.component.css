@@ -51,7 +51,7 @@ body{
 
 }
 section{
-  margin: 0px 1.5em;
+  margin: 1.5em 1.5em 0em 1.5em;
 }
 
 /* for custom scrollbar for webkit browser*/
