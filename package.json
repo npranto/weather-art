@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "weather-art",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Get a quick glimpse of the weather for your favorite US cities",
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
