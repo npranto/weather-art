@@ -4,8 +4,8 @@ Get a quick glimpse of the weather for your favorite US cities
 
 
 ## Features
-* A farely simple, yet useful applicatino to get a quick overview of the weather of your favorite cities or destinations.
-* Going to Seattle anytime soon, get a gimpse of of the average tempetature, pressure and humidity for the upcoming week. 
+* A farely simple, yet useful application to get a quick overview of the weather of your favorite cities or destinations.
+* Going to Seattle anytime soon, get a glimpse of of the average temperature, pressure and humidity for the upcoming week. 
 * Provides a visual graph to show incremental and decremental factors in the weather for the next few days
 
 ## Getting Started
