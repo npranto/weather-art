@@ -1,16 +1,16 @@
-# weather-art
+# weatherion
 
-Get a quick glimpse of the weather for your favorite US cities
+A simple clone of the Apple Weather application - quickly check weather for current location and by city
 
 
 ## Features
-* A farely simple, yet useful application to get a quick overview of the weather of your favorite cities or destinations.
-* Going to Seattle anytime soon, get a glimpse of of the average temperature, pressure and humidity for the upcoming week. 
-* Provides a visual graph to show incremental and decremental factors in the weather for the next few days
+* A fairly simple, yet useful application to get a quick overview of the weather in your location or of your favorite destinations.
+* Going to Seattle anytime soon, get a glimpse of hourly and weekly forecast on just your fingertips
+* Easily check sunrise and sunset times, also chance of rain and wind conditions as often needed at times
 
 ## Getting Started
-* Quick [**DEMO**](http://weatherart.surge.sh/)
-* To start exploring with the codebase by installing a local version of weather-art, follow the steps below.
+* Quick [**DEMO**](http://weatherion.surge.sh/)
+* To start exploring with the codebase by installing a local version of weatherion, follow the steps below.
 
 
 
@@ -23,12 +23,12 @@ Make sure to have the following packages installed:
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development environment running:
+Steps to get a development environment running:
 
-To clone the current repository, open up the command line and run 
+To clone the current repository, open up the command line and run
 
 ```
-git clone https://github.com/npranto/weather-art.git [PROJECT_NAME]
+git clone https://github.com/npranto/weatherion.git [PROJECT_NAME]
 ```
 
 Now, go into the project directory
@@ -55,7 +55,7 @@ yarn start
 * [materialize.css](http://materializecss.com/) - Front End Framework
 * [yarn](https://yarnpkg.com/en/) - Package Manager
 * [webpack](https://webpack.js.org/) - Bundling Components and Assets
-* [babel](https://babeljs.io/) - ES6 and React Transpiler
+* [babel](https://babeljs.io/) - ES6 and JSX Compiler
 * [jquery](https://jquery.com/) - JavaScript Library
 * [lodash](https://lodash.com/) - JavaScript Utility Library
 * [hover.css](http://materializecss.com/) - Collection of Hover Effects
@@ -65,7 +65,7 @@ yarn start
 * [react-redux](https://github.com/reactjs/react-redux) - Binding Redux With React
 * [react-sparklines](https://momentjs.com/) - React Chart Module
 * [redux](https://momentjs.com/) - State Container or Manager
-* [redux-promise](https://momentjs.com/) - Redux Middleware 
+* [redux-promise](https://momentjs.com/) - Redux Middleware
 
 
 
