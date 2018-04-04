@@ -6,7 +6,8 @@ import './App.css';
 class App extends Component {
 
     componentWillMount() {
-        console.log( getLocationsByCityQuery('cambridge') );
+        getLocationsByCityQuery('paris')
+            .then(res => console.log(res))
     }
 
     render() {
