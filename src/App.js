@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
-import {getLocationsByCityQuery, getAstronomy, getWeatherCondition, getForecastForNext10Days, getHourlyForecastForNext24Hours} from './services/api';
+import {
+    getLocationsByCityQuery,
+    getAstronomy,
+    getWeatherCondition,
+    getForecastForNext10Days,
+    getHourlyForecastForNext24Hours,
+    getCurrentLocationLonAndLat} from './services/api';
 import './App.css';
 
 class App extends Component {
@@ -18,8 +24,12 @@ class App extends Component {
         // getForecastForNext10Days('fbjhsdbfhjsfjbdfh', 'USA', 'CA')
         //     .then(res => console.log(res))
 
-        getHourlyForecastForNext24Hours('pabna')
-            .then(res => console.log(res))
+        // getHourlyForecastForNext24Hours('pabna')
+        //     .then(res => console.log(res))
+
+        // getCurrentLocationLonAndLat((res) => {
+        //     console.log(res)
+        // });
     }
 
     render() {
