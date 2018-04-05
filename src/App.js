@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {getLocationsByCityQuery, getAstronomy} from './services/api';
+import {getLocationsByCityQuery, getAstronomy, getWeatherCondition} from './services/api';
 import './App.css';
 
 class App extends Component {
@@ -9,8 +9,11 @@ class App extends Component {
         // getLocationsByCityQuery('paris')
         //     .then(res => console.log(res))
 
-        getAstronomy('dfgdfg')
-            .then(res => console.log(res))
+        // getAstronomy('tulsa')
+        //     .then(res => console.log(res))
+
+        // getWeatherCondition('kushtia')
+        //     .then(res => console.log(res));
     }
 
     render() {
