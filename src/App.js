@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {getLocationsByCityQuery, getAstronomy, getWeatherCondition} from './services/api';
+import {getLocationsByCityQuery, getAstronomy, getWeatherCondition, getForecastForNext10Days} from './services/api';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +14,9 @@ class App extends Component {
 
         // getWeatherCondition('kushtia')
         //     .then(res => console.log(res));
+
+        // getForecastForNext10Days('fbjhsdbfhjsfjbdfh', 'USA', 'CA')
+        //     .then(res => console.log(res))
     }
 
     render() {
