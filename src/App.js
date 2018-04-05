@@ -6,7 +6,8 @@ import {
     getWeatherCondition,
     getForecastForNext10Days,
     getHourlyForecastForNext24Hours,
-    getCurrentLocationLonAndLat} from './services/api';
+    getCurrentLocationLonAndLat,
+    getCityAndCountryFromLonAndLat} from './services/api';
 import './App.css';
 
 class App extends Component {
@@ -28,8 +29,19 @@ class App extends Component {
         //     .then(res => console.log(res))
 
         // getCurrentLocationLonAndLat((res) => {
-        //     console.log(res)
+        //     if (!res.success) {
+        //         console.log(res.message);
+        //     }
+        //     if (res.success) {
+        //         getCityAndCountryFromLonAndLat(res.data).then(res => console.log(res))
+        //     }
         // });
+
+        // latitude: 42.3931559, longitude:-71.13852349999999
+        // getCityAndCountryFromLonAndLat({
+        //     latitude: 42.353904,
+        //     longitude: -71.133711
+        // }).then(res => console.log)
     }
 
     render() {
