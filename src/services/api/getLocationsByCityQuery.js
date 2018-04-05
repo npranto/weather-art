@@ -2,7 +2,7 @@ import fetchJsonp from 'fetch-jsonp';
 import {formatEndpointResponse} from '../helpers';
 
 const getLocationsByCityQuery = (query) => {
-    return fetchJsonp(`${process.env.REACT_APP_WU_API_AUTOCOMPLETE_ENDPOINT}/aq?query=${query}`, {jsonpCallback: 'cb'})
+    return fetchJsonp(`http://autocomplete.wunderground.com/aq?query=${query}`, {jsonpCallback: 'cb'})
         .then((response) => {
             return response.json();
         })

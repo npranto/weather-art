@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
-import {getLocationsByCityQuery} from './services/api';
+import {getLocationsByCityQuery, getAstronomy} from './services/api';
 import './App.css';
 
 class App extends Component {
 
     componentWillMount() {
-        getLocationsByCityQuery('paris')
+        // getLocationsByCityQuery('paris')
+        //     .then(res => console.log(res))
+
+        getAstronomy('dfgdfg')
             .then(res => console.log(res))
     }
 
