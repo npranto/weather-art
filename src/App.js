@@ -40,8 +40,8 @@ class App extends Component {
         // latitude: 42.3931559, longitude:-71.13852349999999
         // getCityAndCountryFromLonAndLat({
         //     latitude: 42.353904,
-        //     longitude: -71.133711
-        // }).then(res => console.log)
+        //     longitude: -4345.133711
+        // }).then(res => console.log(res))
     }
 
     render() {
