@@ -16,7 +16,7 @@ class App extends Component {
         // getLocationsByCityQuery('paris')
         //     .then(res => console.log(res))
 
-        // getAstronomy('tulsa')
+        // getAstronomy('bolbo')
         //     .then(res => console.log(res))
 
         // getWeatherCondition('kushtia')
