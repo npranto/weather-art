@@ -13,7 +13,7 @@ import './App.css';
 class App extends Component {
 
     componentWillMount() {
-        // getLocationsByCityQuery('paris')
+        // getLocationsByCityQuery('fgdfgf')
         //     .then(res => console.log(res))
 
         // getAstronomy('bolbo')
