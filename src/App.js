@@ -19,7 +19,7 @@ class App extends Component {
         // getAstronomy('bolbo')
         //     .then(res => console.log(res))
 
-        // getWeatherCondition('kushtia')
+        // getWeatherCondition('fdgdfgf')
         //     .then(res => console.log(res));
 
         // getForecastForNext10Days('cambridge', 'US', 'MA')
