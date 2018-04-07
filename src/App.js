@@ -25,7 +25,7 @@ class App extends Component {
         // getForecastForNext10Days('cambridge', 'US', 'MA')
         //     .then(res => console.log(res))
 
-        // getHourlyForecastForNext24Hours('pabna')
+        // getHourlyForecastForNext24Hours('fgdfgfdgf')
         //     .then(res => console.log(res))
 
         // getCurrentLocationLonAndLat((res) => {
