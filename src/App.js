@@ -22,7 +22,7 @@ class App extends Component {
         // getWeatherCondition('kushtia')
         //     .then(res => console.log(res));
 
-        // getForecastForNext10Days('fbjhsdbfhjsfjbdfh', 'USA', 'CA')
+        // getForecastForNext10Days('cambridge', 'US', 'MA')
         //     .then(res => console.log(res))
 
         // getHourlyForecastForNext24Hours('pabna')
