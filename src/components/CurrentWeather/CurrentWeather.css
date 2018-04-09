@@ -1,11 +1,11 @@
 .CurrentWeather {
     width: 100%;
-    height: 35%;
+    /* height: 35%; */
     background: lightblue;
     padding-top: 5%;
     padding-bottom: 3%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
     text-align: center;
     box-sizing: border-box;
     display: flex;
