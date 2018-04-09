@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
+import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import './Weather.css';
 
 class Weather extends Component {
     render() {
         return (
             <div className="Weather">
-                Weather 
+                <CurrentWeather />
             </div>
         )
     }
