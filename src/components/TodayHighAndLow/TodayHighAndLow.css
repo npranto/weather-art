@@ -1,0 +1,14 @@
+.TodayHighAndLow {
+    width: 100%;
+    background: lightyellow;
+    display: flex;
+    justify-content: space-between;
+}
+.TodayHighAndLow .temperature-high-low {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.TodayHighAndLow .low {
+    color: gray;
+}
