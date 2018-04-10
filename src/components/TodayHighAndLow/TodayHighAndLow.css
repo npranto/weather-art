@@ -5,9 +5,13 @@
     justify-content: space-between;
 }
 .TodayHighAndLow .temperature-high-low {
-    width: 20%;
+    width: calc(100% / 3);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding-left: 15%;
+}
+.TodayHighAndLow .temperature-high-low p {
+    padding-left: 15%;
 }
 .TodayHighAndLow .low {
     color: gray;
