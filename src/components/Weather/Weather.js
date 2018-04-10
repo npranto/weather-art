@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import CurrentWeather from '../CurrentWeather/CurrentWeather';
+import TodayHighAndLow from '../TodayHighAndLow/TodayHighAndLow';
 import './Weather.css';
 
 class Weather extends Component {
@@ -8,6 +9,7 @@ class Weather extends Component {
         return (
             <div className="Weather">
                 <CurrentWeather />
+                <TodayHighAndLow />
             </div>
         )
     }
