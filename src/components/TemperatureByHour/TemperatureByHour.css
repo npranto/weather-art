@@ -1,0 +1,13 @@
+.TemperatureByHour {
+    padding: 0% 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.TemperatureByHour .condition-icon {
+    padding: 10%;
+}
+.TemperatureByHour .condition-icon img {
+    width: 40px;
+}
