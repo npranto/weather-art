@@ -8,7 +8,6 @@
     width: calc(100% / 3);
     display: flex;
     justify-content: flex-end;
-    padding-left: 15%;
 }
 .TodayHighAndLow .temperature-high-low p {
     padding-left: 15%;
