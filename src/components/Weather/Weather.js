@@ -6,6 +6,7 @@ import HourlyForecast from '../HourlyForecast/HourlyForecast';
 import WeeklyForecast from '../WeeklyForecast/WeeklyForecast';
 import TodayForecastSummary from '../TodayForecastSummary/TodayForecastSummary';
 import TodayWeatherStats from '../TodayWeatherStats/TodayWeatherStats';
+import Navigation from '../Navigation/Navigation';
 import './Weather.css';
 
 class Weather extends Component {
@@ -18,6 +19,7 @@ class Weather extends Component {
                 <WeeklyForecast />
                 <TodayForecastSummary />
                 <TodayWeatherStats />
+                <Navigation />
             </div>
         )
     }

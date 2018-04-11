@@ -1,0 +1,15 @@
+.Navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.Navigation .wu-logo-container img {
+    max-width: 100px;
+}
+.Navigation .wu-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
