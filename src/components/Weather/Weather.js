@@ -4,6 +4,7 @@ import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import TodayHighAndLow from '../TodayHighAndLow/TodayHighAndLow';
 import HourlyForecast from '../HourlyForecast/HourlyForecast';
 import WeeklyForecast from '../WeeklyForecast/WeeklyForecast';
+import TodayForecastSummary from '../TodayForecastSummary/TodayForecastSummary';
 import './Weather.css';
 
 class Weather extends Component {
@@ -14,6 +15,7 @@ class Weather extends Component {
                 <TodayHighAndLow />
                 <HourlyForecast />
                 <WeeklyForecast />
+                <TodayForecastSummary />
             </div>
         )
     }
