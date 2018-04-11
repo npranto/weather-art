@@ -1,0 +1,18 @@
+.WeatherStat {
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.WeatherStat .label {
+    text-transform: uppercase;
+    color: gray;
+}
+.WeatherStat .left {
+    text-align: left;
+}
+.WeatherStat .right {
+    text-align: right;
+}
+.WeatherStat .value {
+    font-size: 1.5em;
+}
