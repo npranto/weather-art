@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
 }
+.TodayHighAndLow .today {
+    width: calc(100% - (100% / 3));
+}
 .TodayHighAndLow .temperature-high-low {
     width: calc(100% / 3);
     display: flex;
