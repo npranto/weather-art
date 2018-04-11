@@ -1,0 +1,7 @@
+.TodayForecastSummary {
+    width: 100%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
