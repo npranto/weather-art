@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import FaAlignRight from 'react-icons/lib/fa/align-right';
 
 import WundergroundLogo from './../../assets/images/wunderground-logo.png';
@@ -11,7 +12,9 @@ class Navigation extends Component {
                 <div className="wu-logo-container">
                     <img src={WundergroundLogo} alt="Weather Underground API Logo Credit"/>
                 </div>
-                <FaAlignRight size="32"/>
+                <Link to="/gallery"> 
+                    <FaAlignRight size="32"/>
+                </Link>
             </div>
         )
     }
