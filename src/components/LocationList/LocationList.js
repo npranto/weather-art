@@ -1,12 +1,32 @@
 import React, {Component} from 'react';
 
 import './LocationList.css';
+import LocationListItem from '../LocationListItem/LocationListItem';
 
 class LocationList extends Component {
     render() {
         return (
             <div className="LocationList">
-                Location List 
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
+                <LocationListItem />
             </div>
         )
     }

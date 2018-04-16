@@ -1,0 +1,15 @@
+.LocationListItem {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0%;
+}
+.LocationListItem .location .city {
+    font-size: 1.25em;
+}
+.LocationListItem .temperature {
+    font-size: 2em;
+    font-weight: bold;
+}

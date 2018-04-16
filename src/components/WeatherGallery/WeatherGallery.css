@@ -4,4 +4,10 @@
     padding-left: 4%;
     padding-right: 4%;
     box-sizing: border-box;
+} 
+.WeatherGallery .title {
+    padding-top: 3%;
+    padding-bottom: 1.5%;
+    font-size: 1.75em;
+    color: gray;
 }
