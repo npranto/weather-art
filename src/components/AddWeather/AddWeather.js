@@ -7,7 +7,7 @@ class AddWeather extends Component {
     render() {
         return (
             <div className="AddWeather">
-                <MdAdd plus={32}/>
+                <MdAdd size={32}/>
             </div>
         )
     }

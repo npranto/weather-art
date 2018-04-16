@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import LocationList from './../LocationList/LocationList';
 import AddWeather from './../AddWeather/AddWeather';
+import ToggleCelsiusAndFahrenheit from '../ToggleCelsiusAndFahrenheit/ToggleCelsiusAndFahrenheit';
 import './WeatherGallery.css';
 
 class WeatherGallery extends Component {
@@ -11,6 +12,7 @@ class WeatherGallery extends Component {
                 <p className="title"> Forecasts </p>
                 <LocationList />
                 <div className="add-weather-and-temperature-toggler">
+                    <ToggleCelsiusAndFahrenheit />
                     <AddWeather />
                 </div>
             </div>
