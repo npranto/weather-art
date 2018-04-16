@@ -1,0 +1,38 @@
+.SearchForm {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+.SearchForm .search-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SearchForm .search {
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.SearchForm input {
+    width: 100%;
+    padding: 3%;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+.SearchForm .search-button {
+    /* padding: 2%; */
+    box-sizing: border-box;
+}
+.SearchForm .search-button button {
+    color: lightgray;
+    font-size: 1em;
+    border: none;
+    background: none;
+    outline: none;
+}
+.SearchForm .active {
+    color: blue !important;
+}
