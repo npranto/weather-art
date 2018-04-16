@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Weather from './components/Weather/Weather';
 import WeatherGallery from './components/WeatherGallery/WeatherGallery';
+import FindLocation from './components/FindLocation/FindLocation';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
                     <div className="routes">
                         <Route exact path="/" component={Weather} />
                         <Route path="/gallery" component={WeatherGallery} />
+                        <Route path="/search" component={FindLocation} />
                     </div>
                 </Router>
             </div>
