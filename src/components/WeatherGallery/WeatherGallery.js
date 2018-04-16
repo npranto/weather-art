@@ -7,6 +7,7 @@ class WeatherGallery extends Component {
     render() {
         return (
             <div className="WeatherGallery">
+                <p className="title"> Forecasts </p>
                 <LocationList />
             </div>
         )
