@@ -20,13 +20,6 @@ class LocationList extends Component {
                 <LocationListItem />
                 <LocationListItem />
                 <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
-                <LocationListItem />
             </div>
         )
     }

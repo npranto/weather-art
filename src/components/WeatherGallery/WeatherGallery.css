@@ -11,3 +11,11 @@
     font-size: 1.75em;
     color: gray;
 }
+.add-weather-and-temperature-toggler {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    box-sizing: border-box;
+}
