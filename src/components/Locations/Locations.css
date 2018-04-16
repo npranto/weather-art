@@ -1,0 +1,12 @@
+.Locations {
+    width: 100%;
+    padding: 2% 7%;
+    box-sizing: border-box;
+}
+.Locations a {
+    display: block;
+    text-decoration: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: gray;
+}
