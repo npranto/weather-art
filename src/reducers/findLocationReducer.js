@@ -14,7 +14,6 @@ const findLocationReducer = (state = {
         case FETCH_LOCATIONS_BY_QUERY: {
             let copy = cloneDeep(state);
             const {success, data, message} = action.payload;
-            console.log(action.payload);
             if (success) {
                 copy.locations = [...data];
                 copy.error.status = true;
