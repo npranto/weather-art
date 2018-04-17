@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import Weather from './components/Weather/Weather';
 import WeatherGallery from './components/WeatherGallery/WeatherGallery';
@@ -22,7 +23,7 @@ class App extends Component {
     }
 }
 
-export default App;
+export default (App);
 
 
 
