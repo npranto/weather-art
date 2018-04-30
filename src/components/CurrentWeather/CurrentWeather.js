@@ -4,11 +4,12 @@ import './CurrentWeather.css';
 
 class CurrentWeather extends Component {
     render() {
+        const { city, temperature, condition } = this.props;
         return (
             <div className="CurrentWeather">
-                <p className="city"> San Francisco Bay Area </p>
-                <p className="condition"> Partly Cloudy </p>
-                <p className="temperature"> 54&deg; </p>
+                <p className="city"> {city} </p>
+                <p className="condition"> {condition} </p>
+                <p className="temperature"> {temperature}&deg; </p>
             </div>
         )
     }

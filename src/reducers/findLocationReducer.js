@@ -1,7 +1,7 @@
+import cloneDeep from 'lodash.clonedeep';
 import {
     FETCH_LOCATIONS_BY_QUERY
 } from './../actions/types';
-import cloneDeep from 'lodash.clonedeep';
 
 const findLocationReducer = (state = {
     locations: [],
