@@ -15,16 +15,28 @@ import './Weather.css';
 class Weather extends Component {
     componentWillMount() {
         this.props.getCurrentLocationWeatherCondition();
+        this.props.getTodaysHighAndLowTemperatures();
     }
     render() {
         const { condition } = this.props.weather;
+        const { forecastToday } = this.props.weather;
+        console.log(forecastToday);
         return (
             <div className="Weather">
                 <CurrentWeather 
                     city={condition.city} 
                     temperature={condition.temp_f} 
                     condition={condition.weather} />
-                <TodayHighAndLow />
+                {
+                    forecastToday 
+                        ?   <TodayHighAndLow 
+                                day={forecastToday.todaysHighAndLow.day}
+                                month={forecastToday.todaysHighAndLow.month}
+                                weekday={forecastToday.todaysHighAndLow.weekday}
+                                highTemperature={forecastToday.todaysHighAndLow.highF}
+                                lowTemperature={forecastToday.todaysHighAndLow.lowF} />
+                        : ''
+                }
                 <HourlyForecast />
                 <WeeklyForecast />
                 <TodayForecastSummary />

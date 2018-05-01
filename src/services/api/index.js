@@ -6,6 +6,7 @@ import getForecastForNext10DaysEndpoint from './getForecastForNext10Days';
 import getHourlyForecastForNext24HoursEndpoint from './getHourlyForecastForNext24Hours';
 import getCurrentLocationLonAndLatEndpoint from './getCurrentLocationLonAndLat';
 import getCityAndCountryFromLonAndLatEndpoint from './getCityAndCountryFromLonAndLat';
+import getTodaysForecastEndpoint from './getTodaysForecast';
 
 export const getLocationsByCityQuery = getLocationsByCityQueryEndpoint;
 export const getAstronomy = getAstronomyEndpoint;
@@ -14,3 +15,4 @@ export const getForecastForNext10Days = getForecastForNext10DaysEndpoint;
 export const getHourlyForecastForNext24Hours = getHourlyForecastForNext24HoursEndpoint;
 export const getCurrentLocationLonAndLat = getCurrentLocationLonAndLatEndpoint;
 export const getCityAndCountryFromLonAndLat = getCityAndCountryFromLonAndLatEndpoint;
+export const getTodaysForecast = getTodaysForecastEndpoint;
