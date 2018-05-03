@@ -18,24 +18,28 @@ class Weather extends Component {
         this.props.getTodaysHighAndLowTemperatures();
     }
     render() {
-        const { condition } = this.props.weather;
-        const { forecastToday } = this.props.weather;
-        console.log(forecastToday);
+        const { condition, forecastToday } = this.props.weather;
         return (
             <div className="Weather">
-                <CurrentWeather 
-                    city={condition.city} 
-                    temperature={condition.temp_f} 
-                    condition={condition.weather} />
-                {
-                    forecastToday 
-                        ?   <TodayHighAndLow 
-                                day={forecastToday.todaysHighAndLow.day}
-                                month={forecastToday.todaysHighAndLow.month}
-                                weekday={forecastToday.todaysHighAndLow.weekday}
-                                highTemperature={forecastToday.todaysHighAndLow.highF}
-                                lowTemperature={forecastToday.todaysHighAndLow.lowF} />
-                        : ''
+                { condition 
+                    ? (
+                        <CurrentWeather 
+                            city={condition.city} 
+                            temperature={condition.temp_f} 
+                            condition={condition.weather} />
+                    )
+                    : (<div> Loading... </div>)
+                }
+                { forecastToday && forecastToday.todaysHighAndLow 
+                    ? (
+                        <TodayHighAndLow 
+                            day={forecastToday.todaysHighAndLow.day}
+                            month={forecastToday.todaysHighAndLow.month}
+                            weekday={forecastToday.todaysHighAndLow.weekday}
+                            highTemperature={forecastToday.todaysHighAndLow.highF}
+                            lowTemperature={forecastToday.todaysHighAndLow.lowF} />
+                    )
+                    : (<div> Loading... </div>)
                 }
                 <HourlyForecast />
                 <WeeklyForecast />
