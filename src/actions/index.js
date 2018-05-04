@@ -74,9 +74,9 @@ export const getTodaysHighAndLowTemperatures = () => {
                                     chanceOfRain: day.pop
                                 },
                                 night: {
-                                    quickSummary: day.fcttext,
-                                    title: day.title,
-                                    chanceOfRain: day.pop
+                                    quickSummary: night.fcttext,
+                                    title: night.title,
+                                    chanceOfRain: night.pop
                                 },
                                 todaysHighAndLow: {
                                     day: todaysHighAndLow.date.day,

@@ -1,14 +1,28 @@
 import React, {Component} from 'react';
+import MdWbSunny from 'react-icons/lib/md/wb-sunny';
+import FaMoonO from 'react-icons/lib/fa/moon-o';
 
 import './TodayForecastSummary.css';
 
 class TodayForecastSummary extends Component {
     render() {
+        const { dayQuickSummary, nightQuickSummary } = this.props;
         return (
             <div className="TodayForecastSummary">
-                <p className="condition-summary">
-                    <strong> Today: </strong> Partly cloudy in the morning, then clear. High of 20C. Windy. Winds from the West at 20 to 35 km/h.
-                </p>
+                <div className="condition-summary">
+                    <div className="summary-block day">
+                        <div className="icon">
+                            <MdWbSunny size={32} /> 
+                        </div>
+                        <p> {dayQuickSummary} </p>
+                    </div>
+                    <div className="summary-block night">
+                        <div className="icon">
+                            <FaMoonO size={32} /> 
+                        </div>
+                        <p> {nightQuickSummary} </p>
+                    </div>
+                </div>
             </div>
         )
     }
