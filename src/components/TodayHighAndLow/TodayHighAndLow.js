@@ -11,8 +11,9 @@ class TodayHighAndLow extends Component {
                     {weekday}, {month} {day}
                 </div>
                 <div className="temperature-high-low">
-                    <p className="high"> {highTemperature} </p>
-                    <p className="low"> {lowTemperature} </p>
+                    <p className="high"> <sup> {highTemperature}&deg; </sup> </p>
+                    <p className="slash"> / </p>
+                    <p className="low"> <sub> {lowTemperature}&deg; </sub> </p>
                 </div>
             </div>
         )
