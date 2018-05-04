@@ -10,6 +10,7 @@ import TodayForecastSummary from '../TodayForecastSummary/TodayForecastSummary';
 import TodayWeatherStats from '../TodayWeatherStats/TodayWeatherStats';
 import Navigation from '../Navigation/Navigation';
 import getCurrentLocationLonAndLat from './../../services/api/getCurrentLocationLonAndLat';
+import { isDayTime } from './../../services/helpers';
 import './Weather.css';
 
 class Weather extends Component {
@@ -18,9 +19,16 @@ class Weather extends Component {
         this.props.getTodaysHighAndLowTemperatures();
         this.props.fetchHourlyForecastForNext24Hours();
         this.props.fetchForecastForNext10Days();
+        this.props.fetchAstronomy();
     }
     render() {
-        const { condition, forecastToday, hourlyForecasts, forecastForNext10Days } = this.props.weather;
+        const { 
+            condition, 
+            forecastToday, 
+            hourlyForecasts, 
+            forecastForNext10Days,
+            astronomy 
+        } = this.props.weather;
         return (
             <div className="Weather">
                 { condition 
@@ -66,7 +74,32 @@ class Weather extends Component {
                     )
                     : (<div>Loading...</div>)
                 }
-                <TodayWeatherStats />
+                {
+                    (
+                        astronomy && 
+                        astronomy.sunrise && 
+                        astronomy.sunset && 
+                        forecastToday && 
+                        forecastToday.day &&
+                        forecastToday.night && 
+                        condition && 
+                        condition.wind
+                    ) 
+                    ? (
+                        <TodayWeatherStats 
+                            sunrise={astronomy.sunrise}
+                            sunset={astronomy.sunset}
+                            chanceOfRain={isDayTime() ? forecastToday.day.chanceOfRain : forecastToday.night.chanceOfRain}
+                            relativeHumidity={condition.relativeHumidity}
+                            wind={condition.wind}
+                            feelsLike={condition.feelsLike}
+                            precipitation={condition.precipitation}
+                            pressure={condition.pressure}
+                            visibility={condition.visibility}
+                            uv={condition.uv} />
+                    )
+                    : (<div>Loading...</div>)
+                }
                 <Navigation />
             </div>
         )

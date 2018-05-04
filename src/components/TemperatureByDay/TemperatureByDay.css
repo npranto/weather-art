@@ -18,3 +18,6 @@
 .TemperatureByDay .temperature-high-low p {
     padding-left: 15%;
 }
+.TemperatureByDay .temperature-high-low .low {
+    color: gray;
+}

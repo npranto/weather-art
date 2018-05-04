@@ -2,7 +2,7 @@
     width: 100%;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
-    padding: 3%;
+    padding: 3% 0%;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;

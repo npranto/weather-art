@@ -3,7 +3,8 @@ import {
     GET_CURRENT_LOCATION_WEATHER_CONDITION,
     GET_TODAYS_HIGH_AND_LOW_TEMPERATURES,
     FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS,
-    FETCH_FORECAST_FOR_NEXT_10_DAYS
+    FETCH_FORECAST_FOR_NEXT_10_DAYS,
+    FETCH_ASTRONOMY
 } from './types';
 import {
     getLocationsByCityQuery,
@@ -12,7 +13,8 @@ import {
     getTodaysForecast,
     getHourlyForecastForNext24Hours,
     getCityAndCountryFromLonAndLat,
-    getForecastForNext10Days
+    getForecastForNext10Days,
+    getAstronomy
 } from './../services/api';
 import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
 
@@ -40,7 +42,17 @@ export const getCurrentLocationWeatherCondition = () => {
                             let currentConditionInfo = {
                                 city: condition.data.current_observation.display_location.city,
                                 temp_f: condition.data.current_observation.temp_f,
-                                weather: condition.data.current_observation.weather
+                                weather: condition.data.current_observation.weather,
+                                relativeHumidity: condition.data.current_observation.relative_humidity,
+                                wind: {
+                                    direction: condition.data.current_observation.wind_dir,
+                                    speed: condition.data.current_observation.wind_mph
+                                },
+                                pressure: condition.data.current_observation.pressure_in,
+                                feelsLike: condition.data.current_observation.feelslike_f,
+                                precipitation: condition.data.current_observation.precip_today_in,
+                                visibility: condition.data.current_observation.visibility_mi,
+                                uv: condition.data.current_observation.UV
                             }
                             dispatch({
                                 type: GET_CURRENT_LOCATION_WEATHER_CONDITION,
@@ -151,6 +163,25 @@ export const fetchForecastForNext10Days = () => {
                             dispatch({
                                 type: FETCH_FORECAST_FOR_NEXT_10_DAYS,
                                 payload: forecast10DaysInfo
+                            })
+                        }
+                    })
+            }
+        })
+    }
+}
+
+export const fetchAstronomy = () => {
+    return (dispatch, getState) => {
+        getCurrentLocationLonAndLat(res => {
+            if (res.success) {
+                const coordinates = res.data;
+                getAstronomy(coordinates)
+                    .then(astronomy => {
+                        if (astronomy.success) {
+                            dispatch({
+                                type: FETCH_ASTRONOMY,
+                                payload: astronomy.data.sun_phase
                             })
                         }
                     })
