@@ -1,13 +1,15 @@
 import {
     FETCH_LOCATIONS_BY_QUERY,
     GET_CURRENT_LOCATION_WEATHER_CONDITION,
-    GET_TODAYS_HIGH_AND_LOW_TEMPERATURES
+    GET_TODAYS_HIGH_AND_LOW_TEMPERATURES,
+    FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS
 } from './types';
 import {
     getLocationsByCityQuery,
     getCurrentLocationLonAndLat,
     getWeatherCondition,
-    getTodaysForecast
+    getTodaysForecast,
+    getHourlyForecastForNext24Hours
 } from './../services/api';
 
 export const fetchLocationsByQuery = (query) => {
@@ -89,5 +91,36 @@ export const getTodaysHighAndLowTemperatures = () => {
                     });
             }
         }))
+    }
+}
+
+export const fetchHourlyForecastForNext24Hours = () => {
+    return (dispatch, getState) => {
+        getCurrentLocationLonAndLat(res => {
+            if (res.success) {
+                const coordinates = res.data;
+                getHourlyForecastForNext24Hours(coordinates)
+                    .then(hourlyForecasts => {
+                        if (hourlyForecasts.success) {
+                            const hourlyForecastsInfo = hourlyForecasts.data.hourly_forecast.map(hourlyForecast => {
+                                return {
+                                    dayAndTime: {
+                                        hour: hourlyForecast.FCTTIME.hour,
+                                        amPM: hourlyForecast.FCTTIME.ampm,
+                                        weekdayShort: hourlyForecast.FCTTIME.weekday_name_abbrev
+                                    },
+                                    temperature: hourlyForecast.temp.english,
+                                    condition: hourlyForecast.condition,
+                                    icon: hourlyForecast.icon
+                                }
+                            });
+                            dispatch({
+                                type: FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS,
+                                payload: hourlyForecastsInfo
+                            })
+                        }
+                    })
+            }
+        })
     }
 }
