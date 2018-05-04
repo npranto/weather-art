@@ -1,7 +1,7 @@
 import {formatEndpointResponse} from './../helpers';
 
-const getForecastForNext10Days = (city, country, state) => {
-    return fetch(`http://api.wunderground.com/api/${process.env.REACT_APP_WU_DEV_API_KEY}/forecast10day/q/${country || ''}/${state || ''}/${city || ''}.json`)
+const getForecastForNext10Days = (coordinates) => {
+    return fetch(`http://api.wunderground.com/api/${process.env.REACT_APP_WU_DEV_API_KEY}/forecast10day/q/${coordinates.latitude},${coordinates.longitude}.json`)
         .then(response => response.json())
         .then(json => {
             if (noCitiesMatchSearchQuery(json)) {
