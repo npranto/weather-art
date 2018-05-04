@@ -2,15 +2,19 @@ import {
     FETCH_LOCATIONS_BY_QUERY,
     GET_CURRENT_LOCATION_WEATHER_CONDITION,
     GET_TODAYS_HIGH_AND_LOW_TEMPERATURES,
-    FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS
+    FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS,
+    FETCH_FORECAST_FOR_NEXT_10_DAYS
 } from './types';
 import {
     getLocationsByCityQuery,
     getCurrentLocationLonAndLat,
     getWeatherCondition,
     getTodaysForecast,
-    getHourlyForecastForNext24Hours
+    getHourlyForecastForNext24Hours,
+    getCityAndCountryFromLonAndLat,
+    getForecastForNext10Days
 } from './../services/api';
+import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
 
 export const fetchLocationsByQuery = (query) => {
     return (dispatch, getState) => {
@@ -117,6 +121,36 @@ export const fetchHourlyForecastForNext24Hours = () => {
                             dispatch({
                                 type: FETCH_HOURLY_FORECASTS_FOR_NEXT_24_HOURS,
                                 payload: hourlyForecastsInfo
+                            })
+                        }
+                    })
+            }
+        })
+    }
+}
+
+export const fetchForecastForNext10Days = () => {
+    return (dispatch, getState) => {
+        getCurrentLocationLonAndLat(res => {
+            if (res.success) {
+                const coordinates = res.data;
+                getForecastForNext10Days(coordinates)
+                    .then(forecast10days => {
+                        if (forecast10days.success) {
+                            const forecast10DaysInfo = forecast10days.data.forecast.simpleforecast.forecastday.map(forecast => {
+                                return {
+                                    weekday: forecast.date.weekday,
+                                    temperatures: {
+                                        high: forecast.high.fahrenheit,
+                                        low: forecast.low.fahrenheit
+                                    },
+                                    condition: forecast.conditions,
+                                    icon: forecast.icon
+                                }
+                            });
+                            dispatch({
+                                type: FETCH_FORECAST_FOR_NEXT_10_DAYS,
+                                payload: forecast10DaysInfo
                             })
                         }
                     })

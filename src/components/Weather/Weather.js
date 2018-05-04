@@ -17,9 +17,10 @@ class Weather extends Component {
         this.props.getCurrentLocationWeatherCondition();
         this.props.getTodaysHighAndLowTemperatures();
         this.props.fetchHourlyForecastForNext24Hours();
+        this.props.fetchForecastForNext10Days();
     }
     render() {
-        const { condition, forecastToday, hourlyForecasts } = this.props.weather;
+        const { condition, forecastToday, hourlyForecasts, forecastForNext10Days } = this.props.weather;
         return (
             <div className="Weather">
                 { condition 
@@ -49,8 +50,15 @@ class Weather extends Component {
                     )
                     : (<div> Loading... </div>)
                 }
+                {
+                    forecastForNext10Days && forecastForNext10Days.length > 0
+                        ? (
+                            <WeeklyForecast 
+                                weeklyForecasts={forecastForNext10Days} />
+                        )
+                        : (<div> Loading... </div>)
+                }
                 
-                <WeeklyForecast />
                 <TodayForecastSummary />
                 <TodayWeatherStats />
                 <Navigation />
