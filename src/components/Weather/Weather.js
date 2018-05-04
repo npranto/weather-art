@@ -58,8 +58,14 @@ class Weather extends Component {
                         )
                         : (<div> Loading... </div>)
                 }
-                
-                <TodayForecastSummary />
+                { (forecastToday && forecastToday.day && forecastToday.night)
+                    ? (
+                        <TodayForecastSummary 
+                            dayQuickSummary={forecastToday.day.quickSummary}
+                            nightQuickSummary={forecastToday.night.quickSummary} />
+                    )
+                    : (<div>Loading...</div>)
+                }
                 <TodayWeatherStats />
                 <Navigation />
             </div>

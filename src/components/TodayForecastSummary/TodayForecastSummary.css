@@ -5,3 +5,21 @@
     padding-top: 3%;
     padding-bottom: 3%;
 }
+.TodayForecastSummary .condition-summary {
+    display: flex;
+    flex-direction: column;
+}
+.TodayForecastSummary .summary-block {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+}
+.TodayForecastSummary .icon {
+    margin-right: 2%;
+}
+.TodayForecastSummary .day .icon {
+    color: gold;
+}
+.TodayForecastSummary .night .icon {
+    color: gray;
+}
