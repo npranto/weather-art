@@ -189,3 +189,7 @@ export const fetchAstronomy = () => {
         })
     }
 }
+
+export const addLocationToWeatherGallery = (location) => {
+
+};
