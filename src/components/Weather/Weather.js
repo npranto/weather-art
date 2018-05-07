@@ -15,11 +15,11 @@ import './Weather.css';
 
 class Weather extends Component {
     componentWillMount() {
-        this.props.getCurrentLocationWeatherCondition();
-        this.props.getTodaysHighAndLowTemperatures();
-        this.props.fetchHourlyForecastForNext24Hours();
-        this.props.fetchForecastForNext10Days();
-        this.props.fetchAstronomy();
+        // this.props.getCurrentLocationWeatherCondition();
+        // this.props.getTodaysHighAndLowTemperatures();
+        // this.props.fetchHourlyForecastForNext24Hours();
+        // this.props.fetchForecastForNext10Days();
+        // this.props.fetchAstronomy();
     }
     render() {
         const { 
@@ -31,7 +31,7 @@ class Weather extends Component {
         } = this.props.weather;
         return (
             <div className="Weather">
-                { condition 
+                {/* { condition 
                     ? (
                         <CurrentWeather 
                             city={condition.city} 
@@ -99,7 +99,7 @@ class Weather extends Component {
                             uv={condition.uv} />
                     )
                     : (<div>Loading...</div>)
-                }
+                } */}
                 <Navigation />
             </div>
         )
