@@ -5,6 +5,7 @@ import './Locations.css';
 class Locations extends Component {
     renderLocations(locations) {
         return locations.map((location, index) => {
+            console.log('EACH LOCATION: ', location);
             return <a href="#" key={index}> {location.name}, {location.c}  </a>
         })
     }
